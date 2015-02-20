@@ -90,6 +90,12 @@
 			"type": "core",
 			"isDefault": true
 		},
+		"can/view/autorender/autorender": {
+			"name": "can.autorender",
+			"type": "plugin",
+			"description": "Automatically render templates found in the document",
+			"hasTest": false
+		},
 		"can/route/pushstate/pushstate": {
 			"name": "can.route.pushstate",
 			"description": "can.route with pushstate",
