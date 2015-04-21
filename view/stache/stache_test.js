@@ -3919,7 +3919,7 @@ steal("can/view/stache", "can/view", "can/map/define", "can/test","can/view/must
 		});
 	}
 
-	test('using #each in asynchronously defined properties', function() {
+	test('using #each when toggling between list and null', function() {
 		var state = new can.Map();
 		var frag = can.stache('{{#each deepness.rows}}<div></div>{{/each}}')(state);
 		
@@ -3928,6 +3928,6 @@ steal("can/view/stache", "can/view", "can/map/define", "can/test","can/view/must
 		});
 		state.attr('deepness', null);
 
-		equal(frag.childNodes.length, 2);
+		equal(frag.childNodes.length, 1, "only the placeholder textnode");
 	});
 });
